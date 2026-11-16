@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int calc_gcd(int m, int x);
+int gcd(int m, int x);
 
 int main(void)
 {
@@ -13,12 +13,12 @@ int main(void)
         printf("NG");
         return 0;
     }
-    printf("%d", calc_gcd(g_m, g_x));
+    printf("%d", gcd(g_m, g_x));
 
     return 0;
 }
 
-int calc_gcd(int m, int x) {
+int gcd(int m, int x) {
     int r;
     for (; x != 0;)
     {
