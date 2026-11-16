@@ -1,27 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void calc_gcd(int m, int x);
+int calc_gcd(int m, int x);
 
 int main(void)
 {
     int g_m = 9966990;
     int g_x = 0;
-    int g_ans = 0;
-
     scanf("%d", &g_x);
     if (g_x > g_m)
     {
         printf("NG");
         return 0;
     }
-    calc_gcd(g_m, g_x);
-    printf("%d", g_ans);
+    printf("%d", calc_gcd(g_m, g_x));
 
     return 0;
 }
 
-void calc_gcd(int m, int x) {
+int calc_gcd(int m, int x) {
     int r;
     for (; x != 0;)
     {
@@ -29,7 +26,7 @@ void calc_gcd(int m, int x) {
         m = x;
         x = r;
     }
-    g_ans = abs(m);
+    return abs(m);
 }
 
 /*
